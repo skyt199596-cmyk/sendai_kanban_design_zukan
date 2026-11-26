@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0075C1">
+<title>薩摩川内市 店舗看板意匠 解剖図鑑</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@800&display=swap" rel="stylesheet">
+<script>
+  /* 動きを減らす設定の端末では、アニメーションを無効にする */
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('anim');
+</script>
+<style>
+/* ============ 基本 ============ */
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:#111;-webkit-text-size-adjust:100%}
+img{display:block;max-width:none;user-select:none;-webkit-user-drag:none}
+.page{max-width:560px;margin:0 auto;background:#fff;overflow:hidden}
+
+/* ============ 表紙 ============ */
+.cover{
+  position:relative;aspect-ratio:522/735;background:#0075C1;
+  container-type:inline-size;overflow:hidden;color:#fff;
+  -webkit-tap-highlight-color:transparent;
+}
+.col{
+  position:absolute;top:4.1%;display:flex;flex-direction:column;
+  font-family:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
+  font-weight:800;line-height:1;
+}
+.col .ch{display:block;width:1em;height:1em;text-align:center;will-change:transform;cursor:default}
+.col-city{left:63.6%;font-size:8.4cqw;color:#000}   /* 薩摩川内市 */
+.col-main{left:46.7%;font-size:17cqw}               /* 店舗看板意匠 */
+.col-sub {left:29.5%;font-size:17cqw}               /* 解剖図鑑 */
+.presented{
+  position:absolute;left:36.6%;top:92%;margin:0;
+  font:2.2cqw/1.25 Georgia,"Times New Roman",serif;color:#fff;
+}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ============ 記事ページ ============
+   1ページ＝基準サイズ 421 x 596。見開きの左ページ・右ページを縦に並べる。
+   各レイヤーは --x --y --w（基準px）で配置する。 */
+.sheet{position:relative;aspect-ratio:421/596;overflow:hidden;background:var(--bg)}
+.layer{
+  position:absolute;
+  left:calc(var(--x) / 421 * 100%);
+  top:calc(var(--y) / 596 * 100%);
+  width:calc(var(--w) / 421 * 100%);
+  will-change:transform;
+}
+.layer img{width:100%;height:auto}
+.layer.box{height:calc(var(--h) / 596 * 100%)}
+
+/* ページに入ったとき、トピックや写真がふわっと現れる */
+.anim .layer[data-reveal] > img{
+  opacity:0;transform:translateY(28px) scale(.92);
+  transition:opacity .7s ease,transform .9s cubic-bezier(.2,.7,.2,1);
+  transition-delay:calc(var(--i,0) * 70ms);
+}
+.anim .layer[data-reveal][data-from="l"] > img{transform:translateX(-36px) scale(.94)}
+.anim .layer[data-reveal][data-from="r"] > img{transform:translateX(36px) scale(.94)}
+.anim .layer[data-reveal][data-from="d"] > img{transform:translateY(-36px) scale(.88)}
+.anim .layer.box[data-reveal]{opacity:0;transition:opacity .7s ease;transition-delay:calc(var(--i,0) * 70ms)}
+.anim .sheet.in .layer[data-reveal] > img{opacity:1;transform:none}
+.anim .sheet.in .layer.box[data-reveal]{opacity:1}
+
+/* 未制作の記事枠（あとで差し替え） */
+.block{aspect-ratio:842/596;background:var(--c)}
+
+/* ============ 配置確認モード：URLの末尾に ?debug を付ける ============ */
+body.debug .layer{outline:1px dashed #ff00cc}
+body.debug .layer::after{
+  content:attr(data-name);position:absolute;left:0;top:0;z-index:99;
+  font:700 9px/1.2 monospace;background:#ff00cc;color:#fff;padding:1px 3px;white-space:nowrap;
+}
+</style>
+</head>
+<body>
+<main class="page">
+
+  <!-- ================= 表紙 ================= -->
+  <header class="cover" id="cover">
+    <h1 class="sr-only">薩摩川内市 店舗看板意匠 解剖図鑑</h1>
+    <div class="col col-city" data-text="薩摩川内市" aria-hidden="true"></div>
+    <div class="col col-main" data-text="店舗看板意匠" aria-hidden="true"></div>
+    <div class="col col-sub"  data-text="解剖図鑑"     aria-hidden="true"></div>
+    <p class="presented">presented by<br>Sendaishoko high school<br>Tokumaru Kanade</p>
+  </header>
+
+  <!-- ================= 記事 =================
+       data-depth : 縦の動き。0=動かない／マイナス=手前（大きく動く）／プラス=奥（ゆっくり）
+       data-dx    : 横の動き　　data-rot : 傾き（度）　　data-zoom : ズーム量
+       data-lock  : t=上端 / b=下端 がページの端に接している素材（動いても隙間が出ないよう制限）
+       data-from  : 現れる向き（l=左 / r=右 / d=上）　　data-name : ?debug のとき表示される素材名 -->
+  <section class="sheet" id="tariyan-1" aria-label="鹿タリヤン" style="--bg:#087169">
+    <div class="layer" data-name="bg_tariyan_02" data-depth="0" style="--x:-32;--y:-12;--w:960"><img src="images/bg_tariyan_02.png" alt="" loading="lazy" decoding="async"></div>
+    <div class="layer" data-name="bg_tariyan_01" data-depth="0" style="--x:0;--y:0;--w:421"><img src="images/bg_tariyan_01.png" alt="鹿タリヤンの外観" loading="lazy" decoding="async"></div>
+    <div class="layer box" data-name="bar(CSS)" data-depth="0" style="--x:0;--y:0;--w:40;--h:596;background:#BD965D"></div>
+    <div class="layer" data-name="kanji_shika" data-depth="-0.5" data-from="d" data-reveal style="--x:40;--y:0;--w:145"><img src="images/kanji_shika.png" alt="鹿" loading="lazy" decoding="async"></div>
+  </section>
+  <section class="sheet" id="tariyan-2" aria-label="鹿タリヤン 解説" style="--bg:#087169">
+    <div class="layer" data-name="bg_tariyan_03" data-depth="-0.4" data-dx="0.08" data-lock="t" style="--x:-20;--y:-53;--w:168"><img src="images/bg_tariyan_03.png" alt="" loading="lazy" decoding="async"></div>
+    <div class="layer" data-name="bg_tariyan_04" data-depth="-0.15" data-lock="t" style="--x:268;--y:-1;--w:167"><img src="images/bg_tariyan_04.png" alt="" loading="lazy" decoding="async"></div>
+    <div class="layer box" data-name="tealbox(CSS)" data-depth="-0.25" data-reveal style="--x:260;--y:20;--w:64;--h:65;background:#087169"></div>
+    <div class="layer" data-name="topic_tariyan_01_" data-depth="-0.25" data-from="r" data-reveal style="--x:132;--y:20;--w:128"><img src="images/topic_tariyan_01_.png" alt="流れが生む統一感" loading="lazy" decoding="async"></div>
+    <div class="layer" data-name="bg_tariyan_05" data-depth="-0.45" data-dx="0.1" data-from="l" data-reveal style="--x:12;--y:256;--w:263"><img src="images/bg_tariyan_05.png" alt="" loading="lazy" decoding="async"></div>
+    <div class="layer" data-name="topic_tariyan_02" data-depth="-0.3" data-from="r" data-reveal style="--x:112;--y:103;--w:169"><img src="images/topic_tariyan_02.png" alt="名前の由来" loading="lazy" decoding="async"></div>
+    <div class="layer" data-name="topic_tariyan_03" data-depth="-0.2" data-from="l" data-reveal style="--x:23;--y:191;--w:127"><img src="images/topic_tariyan_03.png" alt="一文字の力強さ" loading="lazy" decoding="async"></div>
+    <div class="layer" data-name="topic_tariyan_06" data-depth="-0.3" data-lock="b" data-from="r" data-reveal style="--x:218;--y:407;--w:251"><img src="images/topic_tariyan_06.png" alt="看板の作りについて" loading="lazy" decoding="async"></div>
+    <div class="layer" data-name="topic_tariyan_04" data-depth="-0.2" data-reveal style="--x:145;--y:359;--w:85"><img src="images/topic_tariyan_04.png" alt="看板の解説" loading="lazy" decoding="async"></div>
+    <div class="layer" data-name="bg_tariyan_07" data-depth="-0.8" data-dx="-0.12" data-rot="4" data-reveal style="--x:25;--y:343;--w:101"><img src="images/bg_tariyan_07.png" alt="" loading="lazy" decoding="async"></div>
+    <div class="layer" data-name="bg_tariyan_08" data-depth="-0.5" data-lock="b" data-from="l" data-reveal style="--x:-10;--y:448;--w:210"><img src="images/bg_tariyan_08.png" alt="" loading="lazy" decoding="async"></div>
+    <div class="layer" data-name="topic_tariyan_05" data-depth="-0.25" data-reveal style="--x:119;--y:442;--w:127"><img src="images/topic_tariyan_05.png" alt="素材が生む温もり" loading="lazy" decoding="async"></div>
+    <div class="layer" data-name="bg_tariyan_06" data-depth="-0.7" data-rot="2" data-from="r" data-reveal style="--x:251;--y:119;--w:157"><img src="images/bg_tariyan_06.png" alt="鹿タリヤンの看板" loading="lazy" decoding="async"></div>
+  </section>
+  <section class="sheet" id="kappatei-1" aria-label="かっぱ亭" style="--bg:#35838D">
+    <div class="layer" data-name="kappatei_left_baked" data-depth="0" data-zoom="0.04" style="--x:0;--y:0;--w:421"><img src="images/kappatei_left_baked.png" alt="かっぱ亭の外観（田海店・東向田店）" loading="lazy" decoding="async"></div>
+  </section>
+  <section class="sheet" id="kappatei-2" aria-label="かっぱ亭 解説" style="--bg:#35838D">
+    <div class="layer" data-name="bg_kappatei_03" data-depth="0" data-lock="tb" style="--x:-424;--y:-13;--w:871"><img src="images/bg_kappatei_03.png" alt="" loading="lazy" decoding="async"></div>
+    <div class="layer" data-name="cut_kappatei_01" data-depth="0.2" data-lock="t" style="--x:-49;--y:-6;--w:269"><img src="images/cut_kappatei_01.png" alt="店内のカウンター" loading="lazy" decoding="async"></div>
+    <div class="layer" data-name="bg_kappatei_02" data-depth="-0.35" data-from="r" data-reveal style="--x:311;--y:164;--w:113"><img src="images/bg_kappatei_02.png" alt="" loading="lazy" decoding="async"></div>
+    <div class="layer" data-name="topic_kappatei_04" data-depth="-0.4" data-reveal style="--x:102;--y:111;--w:243"><img src="images/topic_kappatei_04.png" alt="かっぱ亭のロゴ" loading="lazy" decoding="async"></div>
+    <div class="layer box" data-name="whitebox_A(CSS)" data-depth="-0.2" data-reveal style="--x:13;--y:202;--w:127;--h:160;background:#fff"></div>
+    <div class="layer" data-name="topic_kappatei_06" data-depth="-0.2" data-from="l" data-reveal style="--x:18;--y:201;--w:116"><img src="images/topic_kappatei_06.png" alt="文字の大きさをいじくりました" loading="lazy" decoding="async"></div>
+    <div class="layer" data-name="topic_kappa_03" data-depth="-0.3" data-from="l" data-reveal style="--x:18;--y:70;--w:140"><img src="images/topic_kappa_03.png" alt="丸の中の密と疎" loading="lazy" decoding="async"></div>
+    <div class="layer" data-name="topic_kappatei_05" data-depth="-0.3" data-from="r" data-reveal style="--x:250;--y:58;--w:165"><img src="images/topic_kappatei_05.png" alt="大きさが生む躍動感" loading="lazy" decoding="async"></div>
+    <div class="layer" data-name="topic_kappatei_07" data-depth="-0.25" data-reveal style="--x:124;--y:353;--w:156"><img src="images/topic_kappatei_07.png" alt="一文字が生むまとまり" loading="lazy" decoding="async"></div>
+    <div class="layer box" data-name="whitebox_B(CSS)" data-depth="-0.25" data-reveal style="--x:281;--y:348;--w:141;--h:147;background:#fff"></div>
+    <div class="layer" data-name="topic_kappatei_09" data-depth="-0.25" data-from="r" data-reveal style="--x:280;--y:366;--w:143"><img src="images/topic_kappatei_09.png" alt="平成明朝W9" loading="lazy" decoding="async"></div>
+    <div class="layer" data-name="topic_kappatei_08" data-depth="-0.55" data-dx="0.1" data-from="l" data-reveal style="--x:12;--y:411;--w:235"><img src="images/topic_kappatei_08.png" alt="かっぱ亭の看板" loading="lazy" decoding="async"></div>
+  </section>
+
+  <!-- ================= 未制作の記事枠（あとで差し替え） ================= -->
+  <section class="block" style="--c:#009944" aria-hidden="true"></section>
+  <section class="block" style="--c:#00A1E9" aria-hidden="true"></section>
+  <section class="block" style="--c:#E4007F" aria-hidden="true"></section>
+
+</main>
+
+<script>
+(function(){
+  'use strict';
+  var anim = document.documentElement.classList.contains('anim');
+  if (/[?&]debug\b/.test(location.search)) document.body.classList.add('debug');
+
+  /* ---------- 表紙の文字を1文字ずつ作る ---------- */
+  document.querySelectorAll('.col[data-text]').forEach(function(col){
+    Array.from(col.dataset.text).forEach(function(t){
+      var s = document.createElement('span'); s.className = 'ch'; s.textContent = t; col.appendChild(s);
+    });
+  });
+
+  /* ---------- 表紙：触れると文字が散って、ばねで戻る ---------- */
+  var cover = document.getElementById('cover');
+  var chars = Array.from(cover.querySelectorAll('.ch')).map(function(el){
+    return {el:el,cx:0,cy:0,x:0,y:0,r:0,vx:0,vy:0,vr:0};
+  });
+  var W = 390, ptr = null, raf = 0;
+
+  function measure(){
+    chars.forEach(function(c){ c.x=c.y=c.r=c.vx=c.vy=c.vr=0; c.el.style.transform='none'; });
+    var cr = cover.getBoundingClientRect(); W = cr.width || 390;
+    chars.forEach(function(c){
+      var b = c.el.getBoundingClientRect();
+      c.cx = b.left - cr.left + b.width/2; c.cy = b.top - cr.top + b.height/2;
+    });
+  }
+  function local(cx,cy){ var r = cover.getBoundingClientRect(); return {x:cx-r.left,y:cy-r.top}; }
+
+  function step(){
+    var u = W/390, R = W*0.24, moving = false;
+    chars.forEach(function(c){
+      if (ptr){
+        var dx = c.cx + c.x - ptr.x, dy = c.cy + c.y - ptr.y, d = Math.hypot(dx,dy) || 1;
+        if (d < R){
+          var f = 1 - d/R, s = f*f*2.6*u;
+          c.vx += dx/d*s; c.vy += dy/d*s; c.vr += (dx>0?1:-1)*f*0.9;
+        }
+      }
+      c.vx -= c.x*0.06; c.vy -= c.y*0.06; c.vr -= c.r*0.06;
+      c.vx *= 0.84; c.vy *= 0.84; c.vr *= 0.84;
+      c.x += c.vx; c.y += c.vy; c.r += c.vr;
+      if (Math.abs(c.x)+Math.abs(c.y)+Math.abs(c.r) > 0.05 || Math.abs(c.vx)+Math.abs(c.vy) > 0.05) moving = true;
+      c.el.style.transform = 'translate3d('+c.x.toFixed(2)+'px,'+c.y.toFixed(2)+'px,0) rotate('+c.r.toFixed(2)+'deg)';
+    });
+    raf = (moving || ptr) ? requestAnimationFrame(step) : 0;
+  }
+  function kick(){ if (!raf) raf = requestAnimationFrame(step); }
+  function burst(p){
+    var u = W/390, R = W*0.4;
+    chars.forEach(function(c){
+      var dx = c.cx - p.x, dy = c.cy - p.y, d = Math.hypot(dx,dy) || 1;
+      if (d < R){ var f = 1 - d/R; c.vx += dx/d*14*u*f; c.vy += dy/d*14*u*f; c.vr += (dx>0?1:-1)*10*f; }
+    });
+  }
+
+  if (anim){
+    cover.addEventListener('pointermove', function(e){ if (e.pointerType==='touch') return; ptr = local(e.clientX,e.clientY); kick(); });
+    cover.addEventListener('pointerleave', function(e){ if (e.pointerType==='touch') return; ptr = null; kick(); });
+    cover.addEventListener('pointerdown', function(e){ if (e.pointerType==='touch') return; burst(local(e.clientX,e.clientY)); kick(); });
+    cover.addEventListener('touchstart', function(e){ var t=e.touches[0]; ptr = local(t.clientX,t.clientY); burst(ptr); kick(); }, {passive:true});
+    cover.addEventListener('touchmove',  function(e){ var t=e.touches[0]; ptr = local(t.clientX,t.clientY); kick(); }, {passive:true});
+    ['touchend','touchcancel'].forEach(function(n){ cover.addEventListener(n, function(){ ptr = null; kick(); }, {passive:true}); });
+  }
+  measure();
+  window.addEventListener('resize', measure);
+  window.addEventListener('load', measure);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
+
+  /* ---------- 記事ページ ---------- */
+  var sheets = Array.from(document.querySelectorAll('.sheet'));
+  if (!anim) return;
+
+  // 素材ごとの動きの設定を読み込む。表示順（--i）で、現れるタイミングをずらす
+  var cfg = new Map();
+  sheets.forEach(function(sh){
+    var list = Array.from(sh.querySelectorAll('.layer')).map(function(el,i){
+      el.style.setProperty('--i', i);
+      return {el:el, d:+el.dataset.depth||0, dx:+el.dataset.dx||0, rot:+el.dataset.rot||0, z:+el.dataset.zoom||0, lock:el.dataset.lock||''};
+    });
+    cfg.set(sh, list);
+  });
+
+  // ページに入ったら素材を現す（1回だけ）
+  var revealIO = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if (e.isIntersecting){ e.target.classList.add('in'); revealIO.unobserve(e.target); } });
+  }, {threshold:0.15});
+  sheets.forEach(function(s){ revealIO.observe(s); });
+
+  // 画面に見えているページだけ、スクロールに合わせて動かす
+  var visible = new Set(), ticking = false;
+  var moveIO = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if (e.isIntersecting) visible.add(e.target); else visible.delete(e.target); });
+    request();
+  }, {rootMargin:'20% 0px'});
+  sheets.forEach(function(s){ moveIO.observe(s); });
+
+  function update(){
+    ticking = false;
+    var vh = window.innerHeight;
+    visible.forEach(function(sh){
+      var r = sh.getBoundingClientRect();
+      var p = (r.top + r.height/2 - vh/2) / (vh/2 + r.height/2);   // 下から入る=+1 ／ 上へ抜ける=-1
+      p = Math.max(-1, Math.min(1, p));
+      var amp = r.width * 0.22, H = sh.offsetHeight;
+      cfg.get(sh).forEach(function(o){
+        if (!o.d && !o.dx && !o.rot && !o.z) return;
+        var ty = p*o.d*amp, tx = p*o.dx*amp;
+        if (o.lock){
+          var top = o.el.offsetTop, bot = top + o.el.offsetHeight;
+          var hi = o.lock.indexOf('t') > -1 ? -top : Infinity;
+          var lo = o.lock.indexOf('b') > -1 ? H - bot : -Infinity;
+          ty = Math.min(Math.max(ty, lo), hi);
+        }
+        var sc = o.z ? 1 + o.z*(1 - Math.abs(p)) : 1;
+        o.el.style.transform = 'translate3d('+tx.toFixed(1)+'px,'+ty.toFixed(1)+'px,0)' +
+          (o.rot ? ' rotate('+(p*o.rot).toFixed(2)+'deg)' : '') + (sc !== 1 ? ' scale('+sc.toFixed(4)+')' : '');
+      });
+    });
+  }
+  function request(){ if (!ticking){ ticking = true; requestAnimationFrame(update); } }
+  window.addEventListener('scroll', request, {passive:true});
+  window.addEventListener('resize', request);
+  window.addEventListener('load', request);
+  document.addEventListener('load', request, true);   // 画像の読み込み後に高さを取り直す
+  request();
+})();
+</script>
+</body>
+</html>
